@@ -1,0 +1,24 @@
+The format for input files is detailed in the "Horizontally" and "Vertically" sections, which detail how the data between 
+#####
+#####
+is read. 
+
+Horizontally:
+Absorption cross section, nu*Fission cross section, chi
+Vertically:
+DISCRETE NEUTRON ENERGIES going from group 1 to G
+
+##### Start (row 12 below)
+0.0092,0.0046,1.0000
+0.0932,0.1139,0.0000
+##### End (row 12 + G - 1 above)
+
+Horizontally:
+FROM scattering cross section from group 1 to G
+Vertically: 
+TO scattering cross section from group 1 to G
+
+##### Start (row 20 + G below)
+1.0000,0.0000
+0.0202,2.0000
+##### End (row 20 + G - 1 above)

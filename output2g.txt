@@ -1,0 +1,54 @@
+The format for input files is detailed in the "Horizontally" and "Vertically" sections, which detail how the data between 
+#####
+#####
+is read. 
+
+Horizontally:
+Absorption cross section, nu*Fission cross section, chi
+Vertically:
+DISCRETE NEUTRON ENERGIES going from group 1 to G
+
+##### Start (row 12 below)
+0.0092,0.0046,1.0000
+0.0932,0.1139,0.0000
+##### End (row 12 + G - 1 above)
+
+Horizontally:
+FROM scattering cross section from group 1 to G
+Vertically: 
+TO scattering cross section from group 1 to G
+
+##### Start (row 20 + G below)
+1.0000,0.0000
+0.0202,2.0000
+##### End (row 20 + G - 1 above)
+
+
+
+The following data corresponds to neutron balance output with 2 discrete neutron energy groups
+
+[[ 0.029  0.   ]
+ [-0.02   0.093]]
+The above data depicts the Migration matrix
+
+[[0.005 0.114]
+ [0.    0.   ]]
+The above data depicts the Fission matrix
+
+[[0.156 0.   ]
+ [1.256 0.   ]]
+The above data depicts the Problem matrix
+
+0.1564625850340136
+The above value is the dominant eigenvalue found by the Power Iteration method using three iterations
+
+[0.124 0.992]
+The above values make up the dominant eigenvector found by the Power Iteration method using three iterations
+
+[0.    0.156]
+The above values make up the eigenvalues found by numpy.linalg.eig()
+
+[[0.    0.124]
+ [1.    0.992]]
+The above matrix has columns that make up the eigenvectors found by numpy.linalg.eig()
+
